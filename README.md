@@ -13,6 +13,13 @@ https://ca.wikipedia.org/wiki/Viquip%C3%A8dia:Gran_Quinzena_Anual_de_la_Qualitat
 $ python treuCatInterwikisDinsCos.py
 ```
 
+## Semibot - Treure Interwiki redundant (2017)
+
+Va ser una primera versió de bot que eliminava l'antiga categoria "Articles amb interviquis locals" si l'article ja no tenia enllaços interns a l'article. També el transformava enllaços interwiki en enllaços interns. Va ser un codi vinculat a la Gran Quinzena Anual de la Qualitat 2017. És un codi sense utilitat actualment donat que la categoria ja no existeix.
+
+```sh
+$ python treuCatInterwikiRedundant.py
+```
 
 ## Concurs PESCAR (2016, mant. 2018)
 
