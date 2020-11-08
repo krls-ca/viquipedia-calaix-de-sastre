@@ -47,19 +47,12 @@ camps següents:
   other_tpl_re
 
 ### Historial
-Gener/2011 - Joancreus, primera versió del programa
-Juliol/2011 - Coet, optimitzades les expressions regulars utilitzades
-Juliol/2011 - Joancreus, arreglats diversos errors en les expressions regulars
-Febrer/2013 - Castor, segona versió, afegit el suport a noves plantilles,
-              arreglada la detecció dels anys, afegida la detecció de mesos,
-              d'enllaços interns a través de plantilles, documentació del codi.
-Agost/2014 - Coet: anglicise variables (en tenim en català i en anglés, i sempre
-             que estiguen en anglés facilita que altres ho entenguen i afegisc
-             la possibilitat de "paràmetres inicials", a més de modificar el
-             codi i reestructurar-lo per a complir amb els estàndards i
-             convencions pythòniques.
-Desembre/2017 - KRLS, refactoritzo codi utilitzant noves llibreries perquè pugui 
-				tornar a funcionar el codi
+* Gener/2011 - Joancreus, primera versió del programa
+* Juliol/2011 - Coet, optimitzades les expressions regulars utilitzades
+* Juliol/2011 - Joancreus, arreglats diversos errors en les expressions regulars
+* Febrer/2013 - Castor, segona versió, afegit el suport a noves plantilles, arreglada la detecció dels anys, afegida la detecció de mesos, d'enllaços interns a través de plantilles, documentació del codi.
+* Agost/2014 - Coet: anglicise variables (en tenim en català i en anglés, i sempre que estiguen en anglés facilita que altres ho entenguen i afegisc la possibilitat de "paràmetres inicials", a més de modificar el codi i reestructurar-lo per a complir amb els estàndards i convencions pythòniques.
+* Desembre/2017 - KRLS, refactoritzo codi utilitzant noves llibreries perquè pugui tornar a funcionar el codi
 
 ### Ús
 Des de la consola, terminal, cmd... executar:
