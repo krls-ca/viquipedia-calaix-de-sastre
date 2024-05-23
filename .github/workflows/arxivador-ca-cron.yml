@@ -1,0 +1,33 @@
+name: arxivador-ca-cron
+
+# Trigger del workflow
+on:
+  schedule:
+    - cron: '50 9 * * *'
+
+jobs:
+  run-arxivador:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pywikibot python-dateutil
+
+        run: |
+          mkdir -p ~/.pywikibot
+          echo "usernames['wikipedia']['ca'] = '${{ secrets.PYWIKIBOT_BOT_NAME }}'" > ~/.pywikibot/user-config.py
+          echo "authenticate['ca.wikipedia.org'] = '${{secrets.PYWIKIBOT_BOT_PASSWORD}}' >> ~/.pywikibot/user-config.py
+        shell: bash
+
+      - name: Run Python script
+        run: python arxivador-cawiki.py
