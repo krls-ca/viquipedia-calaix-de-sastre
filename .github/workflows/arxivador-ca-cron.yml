@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p ~/.pywikibot
           echo "usernames['wikipedia']['ca'] = '${{vars.PYWIKIBOT_USERNAME }}'" > ~/.pywikibot/user-config.py
-          echo "authenticate['ca.wikipedia.org'] = '${{secrets.PYWIKIBOT_BOT_PASSWORD}}'" >> ~/.pywikibot/user-config.py
+          echo "authenticate['ca.wikipedia.org'] = ${{secrets.PYWIKIBOT_BOT_PASSWORD}}" >> ~/.pywikibot/user-config.py
         shell: bash
 
       - name: Run Python script
