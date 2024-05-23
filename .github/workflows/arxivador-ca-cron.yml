@@ -3,7 +3,7 @@ name: arxivador-ca-cron
 # Trigger del workflow
 on:
   schedule:
-    - cron: '51 11 * * *'
+    - cron: '10 15 * * *'
 
 jobs:
   run-arxivador:
@@ -27,8 +27,8 @@ jobs:
       - name: Add credentials
         run: |
           mkdir -p ~/.pywikibot
-          echo "usernames['wikipedia']['ca'] = '${{ secrets.PYWIKIBOT_BOT_NAME }}'" > ~/.pywikibot/user-config.py
-          echo "authenticate['ca.wikipedia.org'] = '${{secrets.PYWIKIBOT_BOT_PASSWORD}}' >> ~/.pywikibot/user-config.py
+          echo "usernames['wikipedia']['ca'] = '${{vars.PYWIKIBOT_USERNAME }}'" > ~/.pywikibot/user-config.py
+          echo "authenticate['ca.wikipedia.org'] = '${{secrets.PYWIKIBOT_BOT_PASSWORD}}'" >> ~/.pywikibot/user-config.py
         shell: bash
 
       - name: Run Python script
