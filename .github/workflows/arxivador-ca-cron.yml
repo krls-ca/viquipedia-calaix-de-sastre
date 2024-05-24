@@ -3,7 +3,7 @@ name: arxivador-ca-cron
 # Trigger del workflow
 on:
   schedule:
-    - cron: '37 15 * * *'
+    - cron: '5 8 * * *'
 
 jobs:
   run-arxivador:
@@ -23,12 +23,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install pywikibot python-dateutil
         shell: bash
-        
+ 
+       - name: Generate Catalan locale
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y locales
+          sudo locale-gen ca_ES.UTF-8
+          sudo update-locale LANG=ca_ES.UTF-8
+        shell: bash
+
       - name: Add credentials
         run: |
           mkdir -p ~/.pywikibot
           echo "usernames['wikipedia']['ca'] = '${{vars.PYWIKIBOT_USERNAME }}'" > ~/.pywikibot/user-config.py
           echo "authenticate['ca.wikipedia.org'] = ${{secrets.PYWIKIBOT_BOT_PASSWORD}}" >> ~/.pywikibot/user-config.py
+
         shell: bash
 
       - name: Run Python script

@@ -69,7 +69,7 @@ class Utils:
 
 
 # globals
-locale.setlocale(locale.LC_TIME, 'ca_AD.UTF-8')
+locale.setlocale(locale.LC_TIME, 'ca_ES.UTF-8')
 site = Site('ca', 'wikipedia')
 site.login()
 
