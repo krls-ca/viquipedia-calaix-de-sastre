@@ -3,7 +3,7 @@ name: arxivador-ca-cron
 # Trigger del workflow
 on:
   schedule:
-    - cron: '12 8 * * *'
+    - cron: '16 35 * * *'
 
 jobs:
   run-arxivador:
@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pywikibot python-dateutil
+          pip install pywikibot python-dateutil requests_oauthlib
           sudo apt-get update
           sudo apt-get install -y locales
           sudo locale-gen ca_ES.UTF-8
