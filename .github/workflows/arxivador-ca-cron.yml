@@ -3,7 +3,7 @@ name: arxivador-ca-cron
 # Trigger del workflow
 on:
   schedule:
-    - cron: '16 35 * * *'
+    - cron: '35 16 * * *'
 
 jobs:
   run-arxivador:
